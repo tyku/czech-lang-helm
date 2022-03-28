@@ -6,7 +6,7 @@ environment:
 applicationPort: 8000
 
 migration:
-  repository: tyku/hw_stream_processing
+  repository: tyku/czech_lang
   imagePullPolicy: Always
   tag: latest
 

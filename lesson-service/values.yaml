@@ -1,10 +1,12 @@
 serviceInstance:
-  nameOverride: order-service
+  nameOverride: lesson-service
   image:
-    repository: tyku/hw_stream_processing
+    repository: tyku/czech_lang
     imagePullPolicy: Always
     tag: latest
   containerPort: 8000
   service:
     type: ClusterIP
     port: 80
+postgresql:
+  enabled: false

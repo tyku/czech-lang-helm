@@ -1,31 +1,52 @@
-# Homework stream-processing (Event-collaboration)
+# Course work czech-lang tg school 
 
-## Install user service
+## Install audio service
 
 namespace default
 ```bash
-helm install user ./app -f ./user-service/values.yaml
+helm install audio ./app -f ./audio-service/values.yaml
 ```
 
-## Install order service
+## Install auth service
 
 namespace default
 ```bash
-helm install user ./app -f ./order-service/values.yaml
+helm install auth ./app -f ./auth-service/values.yaml
 ```
 
-## Install billing service
+## Install dictionary service
 
 namespace default
 ```bash
-helm install user ./app -f ./billing-service/values.yaml
+helm install dictionary ./app -f ./dictionary-service/values.yaml
 ```
 
-## Install notification service
+## Install file service
 
 namespace default
 ```bash
-helm install user ./app -f ./notification-service/values.yaml
+helm install file ./app -f ./file-service/values.yaml
+```
+
+## Install flow service
+
+namespace default
+```bash
+helm install flow ./app -f ./flow-service/values.yaml
+```
+
+## Install lessons service
+
+namespace default
+```bash
+helm install lesson ./app -f ./lesson-service/values.yaml
+```
+
+## Install payment service
+
+namespace default
+```bash
+helm install payment ./app -f ./payment-service/values.yaml
 ```
 
 ## Install Kafka
@@ -64,22 +85,13 @@ minikube service -n nginx-ingress ingress-nginx-controller
 ## Uninstall
 
 ```bash
-helm un user
-helm un order
-helm un billing
-helm un notification
+helm un auth
+helm un flow
+helm un file
+helm un audio
+helm un lesson
+helm un payment
+helm un dictionary
 ```
-
-
-## Tests
-Install newman if you wish:
-```
-brew install newman
-```
-and run prepared test
-```
-newman run ./hw_stream_processing.postman_collection.json
-```
-or import this file to postman, and start manually
 
 Link to course: https://otus.ru/lessons/microservice-architecture

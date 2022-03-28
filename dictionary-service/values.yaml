@@ -1,0 +1,10 @@
+serviceInstance:
+  nameOverride: dictionary-service
+  image:
+    repository: tyku/czech_lang
+    imagePullPolicy: Always
+    tag: latest
+  containerPort: 8000
+  service:
+    type: ClusterIP
+    port: 80
